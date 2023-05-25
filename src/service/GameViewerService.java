@@ -11,10 +11,10 @@ public class GameViewerService{
         int[] grid = new int[101];
 
         for(Snake snake: InMemoryDB.snakes){
-            grid[snake.getEnd()] = snake.getStart();
+            grid[snake.getStart()] = snake.getEnd();
         }
         for(Ladder ladder : InMemoryDB.ladders){
-            grid[ladder.getEnd()] = ladder.getStart();
+            grid[ladder.getStart()] = ladder.getEnd();
         }
 
         int[][] view = new int[10][10];
